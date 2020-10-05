@@ -6,17 +6,17 @@ const TodoInput = () => {
   const [todo_date, setDate] = useState("");
 
   const onNameChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setName(event.target.value);
   };
 
   const onTaskChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setDescription(event.target.value);
   };
 
   const onDateChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setDate(event.target.value);
   };
 
@@ -29,7 +29,8 @@ const TodoInput = () => {
             headers:{"Content-type":"application/json"},
             body:JSON.stringify(body)
         });
-        console.log(response)
+        // console.log(response);
+        window.location='/';
     } catch (err) {
         console.error(err.message)
     }

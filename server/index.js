@@ -35,7 +35,7 @@ app.get('/todos',async (req,res)=>{
 //Get a Todo
 
 app.get('/todos/:id',async (req,res)=>{
-    console.log(req.params)
+    // console.log(req.params)
     const {id}=req.params;
     const todo=await pool.query('SELECT * FROM todo WHERE (todo_id)=$1',[id]);
     res.json(todo.rows[0])
